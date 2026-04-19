@@ -106,6 +106,14 @@ GCEP shifts the battlefield from **Computational Complexity** to **Marginal Cost
 * **The GDP Hostage Logic**: Because GCEP mimics essential UDP/VoIP background noise, any attempt to blanket-block the protocol results in massive "collateral damage" to the adversary's own digital economy.
 * **Incentivized Honesty**: Servers (Hunters) are paid in Bitcoin (via Lightning Network) through ZKP-blind claims, ensuring that they prioritize profit over compliance with surveillance orders.
 
+4.3 The Economic Equilibrium: "Greed as a Shield"To ensure the long-term survival of the BlackForest, GCEP implements a Self-Regulating Reward Cycle. This prevents the protocol from being weaponized for pure profit while ensuring it never relies on unsustainable "altruism."
+
+A. The Burn-to-Earn Ratio (燃燒比)The reward ($Diamond$) is not fixed. It is inversely proportional to the local network congestion and the node's reputation.Logic: If a node only processes "high-value" (profitable) shards and ignores "low-value" (low-fee) ones, its Chained Proof of Service (CPoS) score drops.Outcome: Nodes are forced to carry a percentage of "Pure Love" packets (Zero-fee traffic) to maintain their eligibility for "High-Fee" rewards. You must carry the wind to earn the gold.
+
+B. The Surveillance Tax (監控稅)Any node that exhibits "selective forwarding" (behavior consistent with censorship or black-holing) will have its collateral slashed by the decentralized ledger.Physical Guard: Since the reward collapses at the moment of XDP_TX, a node that "filters" content will physically fail to generate enough valid service proofs. They don't just lose the fee; they lose their operational deposit.
+
+C. Anti-Whale Mechanics (防壟斷)The protocol utilizes Geometric Mean Rewards.Mechanism: 1,000 small nodes earn significantly more in total than one single massive data center.Purpose: This forces the network to remain hyper-decentralized, preventing the "Equation Group" or any state actor from buying up the entire forest to control the gates.
+
 ---
 
 ## 5. Deployment Guide
@@ -144,3 +152,7 @@ sudo bpftool net attach xdp id [GCEP_PROG] dev eth0
 ---
 
 **"We have not built a bridge; we have flooded the forest. You cannot burn the water."**
+
+"GCEP is not a casino; it is an immune system."
+
+"If you attempt to use this protocol for pure financial extraction without contributing to the network's entropy, the physical interlock will starve your node. We have engineered greed into a defense mechanism. By seeking your own profit, you are inadvertently securing the privacy of the entire human race. If you don't like this deal, leave the forest."
