@@ -2,6 +2,16 @@ BlackForest: Ghost Communication & Exchange Protocol (GCEP)
 ## RFC-M: 0xDEADBEEF-01 | Version 1.0 
 ### *A Decentralized Framework for Statistical Invisibility and Economic Attrition*
 
+TL;DR (For Human Beings):
+Imagine a forest where everyone communicates by mimicking the sound of wind.
+To an outsider, it's just a noisy forest. To the inhabitants, it's a high-speed network.
+
+Invisible: We hide data inside the "hum" of the electricity grid.
+
+Unstoppable: Servers get paid automatically in Bitcoin, but only if they successfully deliver the message.
+
+Indestructible: To stop us, you'd have to turn off the world's power and internet.
+
 ---
 
 ## 1. Executive Summary
