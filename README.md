@@ -122,9 +122,14 @@ sudo bpftool net attach xdp id [GCEP_PROG] dev eth0
 ## 6. Visual Proofs & Logic Flows
 *(Please insert your 8 conceptual diagrams here to visualize the following stages)*
 
-1.  **Mimicry Layer**: (Images 1-2) Showing 50Hz PSD alignment.
-2.  **Transmigration**: (Images 3-5) Showing packet mutation in XDP.
-3.  **Settlement**: (Images 6-8) Showing the 10:1 cost asymmetry and ZKP claims.
+1.  <img width="784" height="1168" alt="流程" src="https://github.com/user-attachments/assets/63dd4328-2c17-40ce-a6c4-9b9e69243276" />
+2.  <img width="784" height="1168" alt="监控者" src="https://github.com/user-attachments/assets/7525c517-c186-4c7a-b83e-056892a88994" />
+3.  <img width="784" height="1168" alt="机制" src="https://github.com/user-attachments/assets/cfad416e-9873-4534-b640-5d89208a222f" />
+4.  <img width="1024" height="1536" alt="算法" src="https://github.com/user-attachments/assets/b346c1ca-acb4-4214-8430-1cee8f7959e1" />
+5.  <img width="784" height="1168" alt="暴露" src="https://github.com/user-attachments/assets/74a066bd-b729-401c-844a-22be248ebe30" />
+6.  <img width="1536" height="1024" alt="反监控" src="https://github.com/user-attachments/assets/8304ff72-45b1-4839-a01f-eb1304952189" />
+7.  <img width="1024" height="1536" alt="肉鸡" src="https://github.com/user-attachments/assets/7728ef9d-b81c-4ba3-9335-3f224482898c" />
+8.  <img width="1024" height="1536" alt="扩展" src="https://github.com/user-attachments/assets/30f7a2e2-da30-4492-a724-200df9f5bcb9" />
 
 ---
 
