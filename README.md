@@ -144,10 +144,3 @@ sudo bpftool net attach xdp id [GCEP_PROG] dev eth0
 ---
 
 **"We have not built a bridge; we have flooded the forest. You cannot burn the water."**
-
----
-
-### 如何使用：
-1.  **複製以上內容** 到你 GitHub 倉庫的 `README.md`。
-2.  **依照上面的標註上傳圖片**：在第 6 章節部分，直接拖入你那 8 張圖。
-3.  **這份文件** 包含了從物理層到區塊鏈層的所有硬核細節，足以讓任何技術審查者感受到 GCEP 的壓迫感。
