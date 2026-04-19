@@ -154,6 +154,21 @@ GCEP rejects the "Immediate Forwarding" paradigm.
 * **The Logic:** Implementation of **Asymmetric Time Dilation**. Each shard is held in the kernel buffer for a non-linear, randomized duration determined by a local entropy seed.
 * **The Strategic Value:** By artificially expanding the time-of-flight, GCEP shatters the adversary’s ability to perform **multi-point geolocation**. The randomized jitter ensures that the physical origin of the packet cannot be calculated through microsecond-level triangulation. The "Ghost" remains placeless.
 
+### 3.6 Advanced Obfuscation: Jitter & Shielding
+
+#### I. Dynamic Payload Offset (The "Sliding Diamond")
+To prevent static byte-pattern matching at scale:
+* **The Logic:** The Reward Token ($Diamond$) is not stored at a fixed offset within the 1024-byte fragment. 
+* **The Mechanism:** The location of the token is determined by a **Pseudo-Random Jump** derived from a specific, rotating seed-byte within the encrypted payload itself.
+* **The Defensive Value:** Adversaries cannot use "Fixed-Position Comparison" to filter packets. To even *detect* if a shard contains a reward, the monitor must execute a full computational reconstruction of every packet. This increases the adversary’s operational cost by several orders of magnitude, causing "Infrastructure Thermal Choke."
+
+#### II. Zonal Entropy Shield (CDN Mimicry)
+To mask the nature of the "Echo Spraying" backhaul:
+* **The Logic:** When the Hunter Server sprays data back to the A-Node's ISP zone, it performs **Semantic Mixing**.
+* **The Mechanism:** The encrypted shards are interleaved with fragments of **high-entropy, legitimate local content** (e.g., cached news headlines, social media metadata shards).
+* **The Defensive Value:** The backhaul traffic is statistically indistinguishable from a standard, encrypted CDN (Content Delivery Network) push or a routine software update. The monitor cannot distinguish the "Ghost" from the "Background."
+
+
 ## 4. Economic Attrition & Strategic Defense
 
 GCEP shifts the battlefield from **Computational Complexity** to **Marginal Cost Dynamics**.
@@ -198,6 +213,15 @@ Traditional blockchain rewards happen in near real-time, allowing monitors to li
 * **The Logic:** Rewards ($Diamonds$) earned from transmigrating shards are not released immediately. They are held in a decentralized, time-locked escrow.
 * **The Mechanism:** Payouts occur in **Randomized Batches** only after a significant temporal lag and a minimum volume threshold (e.g., 1.0 BTC). 
 * **The Strategic Value:** This destroys the **Statistical Linkage** between communication bursts and financial gain. Even if a monitor records every packet and every blockchain transaction, there is zero temporal correlation to prove they belong to the same entity. The money "appears" long after the ghost has moved.
+
+### 4.7 Temporal De-correlation: The Blind Payout
+
+To finalize the decoupling of communication and finance:
+
+#### I. Asymmetric Settlement Delay (The Time-Gap)
+* **The Logic:** All reward redemptions are subject to an **Asymmetric Settlement Delay**. 
+* **The Mechanism:** Once the 1.0 BTC threshold is met, the payout is not triggered. Instead, the protocol injects a randomized delay ranging from **10 minutes to 24 hours**.
+* **The Defensive Value:** This severs the **Temporal Linkage** between "Work" and "Pay." Even if an adversary controls the blockchain nodes and monitors the network infrastructure, they cannot correlate a high-volume packet burst with a subsequent reward claim. The two events are mathematically disconnected on the timeline.
 
 ## 5. Deployment Guide
 
