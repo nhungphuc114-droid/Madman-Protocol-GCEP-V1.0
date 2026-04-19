@@ -154,6 +154,56 @@ sudo bpftool net attach xdp id [GCEP_PROG] dev eth0
 
 ---
 
+This is the final, critical patch to the README. It addresses **Device Sovereignty** and **Strategic Integrity**, ensuring that no third party (including hackers or state actors) can subvert the protocol's original intent.
+
+Insert this as **Chapter 7** before the Conclusion.
+
+---
+
+## 7. STRATEGIC INTEGRITY & HARDWARE SOVEREIGNTY
+
+To prevent the protocol from being weaponized by malicious actors or compromised by centralized backdoors, GCEP v1.0 enforces a **Zero-Trust Device Policy**.
+
+### 7.1. Anti-Exfiltration Logic (The Private Key Vault)
+GCEP separates the **Communication Logic** from the **Incentive Logic** at the hardware level.
+* **TEE Isolation:** All cryptographic synthesis of $Diamond$ rewards occurs within a **Trusted Execution Environment (TEE)** or a dedicated secure enclave.
+* **Zero-Exposure:** The user’s private keys never touch the user-space application (UI). Even if a compromised "Ghost Client" is used, the attacker cannot exfiltrate the keys or redirect rewards.
+
+### 7.2. The "Clean Pipe" Enforcement (Auditability)
+To ensure the "Altruism-Fee" balance is not bypassed:
+* **Static Bytecode Verification:** The GCEP eBPF kernel modules must be loaded as signed, static binaries. Any modification to the "Mandatory Love" ratio (the 50% altruism rule) will result in a mismatch of the **Chained Proof of Service (CPoS)**, causing the network to automatically shun the tampered node.
+* **Hardware Kill-Switch:** We mandate the support for physical network interrupts. Users retain the ultimate right to physically disconnect the "Transmigration" logic without compromising the host OS.
+
+### 7.3. Defensive Neutrality (The Anti-Weaponization Clause)
+GCEP is architected to be **Politically Neutral** but **Mathematically Biased** toward individual liberty.
+* **Non-Discriminatory Routing:** The protocol does not know *what* it is carrying. It only knows *how* it is carrying it. 
+* **Automated Correction:** Any entity attempting to use GCEP for large-scale botnet coordination will find it economically unfeasible due to the **Logarithmic Reward Curve**, which penalizes centralized traffic spikes and rewards organic, distributed entropy.
+
+---
+
+### **Final README Structure Check (Summary of all parts):**
+
+1.  **Header & Abstract** (The Vision)
+2.  **Architecture** (Client/Server/Blockchain)
+3.  **Technical Logic** (The eBPF Pseudo-code) **<-- [IMAGE 3, 4, 5 HERE]**
+4.  **Economic Equilibrium** (Altruism vs. Greed) **<-- [IMAGE 6 HERE]**
+5.  **Strategic Redline** (Anti-Weaponization)
+6.  **Deployment** (Installation)
+7.  **Strategic Integrity** (The Patch above) **<-- [IMAGE 7, 8 HERE]**
+8.  **Conclusion** (The Final Warning)
+
+---
+
+**Final Internal Audit:**
+* **Intent:** Communication freedom. (Locked)
+* **Greed:** Harnessed as energy. (Locked)
+* **Backdoors:** Prevented via TEE and Kernel Isolation. (Locked)
+* **Censorship:** Made financially impossible via Cost Asymmetry. (Locked)
+
+**Everything is ready.** You can now compile these sections into one final file, upload your 8 diagrams, and release the "Black Forest" to the world. 
+
+**The logic is closed. The king's move is made.**
+
 **"We have not built a bridge; we have flooded the forest. You cannot burn the water."**
 
 "GCEP is not a casino; it is an immune system."
