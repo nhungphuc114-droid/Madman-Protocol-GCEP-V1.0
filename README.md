@@ -117,6 +117,22 @@ Any node that exhibits "selective forwarding" (behavior consistent with censorsh
 C. Anti-Whale Mechanics 
 The protocol utilizes Geometric Mean Rewards.Mechanism: 1,000 small nodes earn significantly more in total than one single massive data center.Purpose: This forces the network to remain hyper-decentralized, preventing the "Equation Group" or any state actor from buying up the entire forest to control the gates.
 
+4.5 Threshold-Based Settlement & Ledger Persistence
+To maintain the protocol’s economic efficiency and minimize the surveillance footprint on the public blockchain, GCEP does not perform real-time on-chain payouts for every shard transmigrated.
+
+Off-Chain Micro-Ledger (Atomic Accounting):
+Each node maintains a local, cryptographically signed ledger of "Service Proofs." These proofs are gossiped across the forest to build a decentralized consensus of work. This process is zero-cost and occurs at the speed of the network.
+
+The 1.0 BTC Threshold (The Accumulation Rule):
+The protocol utilizes a Threshold Settlement Mechanism. Individual rewards are accumulated in a Layer-2 state channel (similar to the Lightning Network but with increased privacy layers).
+
+Logic: Actual on-chain transmigration of value to a Mainnet BTC address is only triggered when the accumulated reward reaches the 1.0 BTC threshold (or a user-defined high-value limit).
+
+Purpose: This high threshold ensures that the "noise-to-signal" ratio of the transaction is optimal. It prevents the network from being slowed down by "dust transactions" and ensures that only significant, sustained contributors can finalize wealth, thereby filtering out short-term opportunistic attackers.
+
+Zero-Knowledge Aggregation:
+Before settlement, multiple nodes' rewards are aggregated using ZK-Starks. When the 1.0 BTC is finally moved, the public blockchain sees only a single, massive, anonymous transaction. It is impossible to tell if this 1.0 BTC belongs to one giant server or 10,000 small "Ghost" nodes.
+
 ---
 
 ## 5. Deployment Guide
