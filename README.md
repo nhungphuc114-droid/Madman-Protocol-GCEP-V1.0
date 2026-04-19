@@ -1,11 +1,7 @@
-This is the comprehensive, industry-grade **README.md** for the **BlackForest GCEP** repository. It is written in a formal, technical tone intended for senior network engineers, kernel developers, and cryptographers.
-
----
-
 # README.md
 
 # BlackForest: Ghost Communication & Exchange Protocol (GCEP)
-## Version 1.0 - "Transmigration"
+## Version 1.0
 ### *Protocol Status: Active / Non-Negotiable / Physically Immutable*
 
 ---
