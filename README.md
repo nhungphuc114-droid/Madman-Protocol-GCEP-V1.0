@@ -145,8 +145,14 @@ GCEP eliminates the "Return Path" vulnerability.
 * **The Logic:** Servers (Hunters) do not need the A-Node's IP to return data. Instead, they perform a **Zonal Echo**—spraying the encrypted shards toward the A-Node's entire Autonomous System (AS) or ISP domain.
 * **The Effect:** The A-Node "induces" the data from the local network environment using its private key. There is no established "connection," no socket, and no directional trace. It is a ghost-to-ghost handshake.
 
----
+### 3.5 Spatio-Temporal De-correlation (Anti-Geolocation)
 
+To counter **Time Difference of Arrival (TDOA)** and multi-point triangulation used by state-level signals intelligence (SIGINT):
+
+#### A. Asymmetric Time Dilation (ATD)
+GCEP rejects the "Immediate Forwarding" paradigm. 
+* **The Logic:** Implementation of **Asymmetric Time Dilation**. Each shard is held in the kernel buffer for a non-linear, randomized duration determined by a local entropy seed.
+* **The Strategic Value:** By artificially expanding the time-of-flight, GCEP shatters the adversary’s ability to perform **multi-point geolocation**. The randomized jitter ensures that the physical origin of the packet cannot be calculated through microsecond-level triangulation. The "Ghost" remains placeless.
 
 ## 4. Economic Attrition & Strategic Defense
 
@@ -156,7 +162,7 @@ GCEP shifts the battlefield from **Computational Complexity** to **Marginal Cost
 * **The GDP Hostage Logic**: Because GCEP mimics essential UDP/VoIP background noise, any attempt to blanket-block the protocol results in massive "collateral damage" to the adversary's own digital economy.
 * **Incentivized Honesty**: Servers (Hunters) are paid in Bitcoin (via Lightning Network) through ZKP-blind claims, ensuring that they prioritize profit over compliance with surveillance orders.
 
-4.1 The Economic Equilibrium: "Greed as a Shield"To ensure the long-term survival of the BlackForest, GCEP implements a Self-Regulating Reward Cycle. This prevents the protocol from being weaponized for pure profit while ensuring it never relies on unsustainable "altruism."
+### 4.1 The Economic Equilibrium: "Greed as a Shield"To ensure the long-term survival of the BlackForest, GCEP implements a Self-Regulating Reward Cycle. This prevents the protocol from being weaponized for pure profit while ensuring it never relies on unsustainable "altruism."
 
 A. The Burn-to-Earn Ratio 
 The reward ($Diamond$) is not fixed. It is inversely proportional to the local network congestion and the node's reputation.Logic: If a node only processes "high-value" (profitable) shards and ignores "low-value" (low-fee) ones, its Chained Proof of Service (CPoS) score drops.Outcome: Nodes are forced to carry a percentage of "Pure Love" packets (Zero-fee traffic) to maintain their eligibility for "High-Fee" rewards. You must carry the wind to earn the gold.
@@ -167,7 +173,7 @@ Any node that exhibits "selective forwarding" (behavior consistent with censorsh
 C. Anti-Whale Mechanics 
 The protocol utilizes Geometric Mean Rewards.Mechanism: 1,000 small nodes earn significantly more in total than one single massive data center.Purpose: This forces the network to remain hyper-decentralized, preventing the "Equation Group" or any state actor from buying up the entire forest to control the gates.
 
-4.5 Threshold-Based Settlement & Ledger Persistence
+### 4.5 Threshold-Based Settlement & Ledger Persistence
 To maintain the protocol’s economic efficiency and minimize the surveillance footprint on the public blockchain, GCEP does not perform real-time on-chain payouts for every shard transmigrated.
 
 Off-Chain Micro-Ledger (Atomic Accounting):
@@ -183,7 +189,15 @@ Purpose: This high threshold ensures that the "noise-to-signal" ratio of the tra
 Zero-Knowledge Aggregation:
 Before settlement, multiple nodes' rewards are aggregated using ZK-Starks. When the 1.0 BTC is finally moved, the public blockchain sees only a single, massive, anonymous transaction. It is impossible to tell if this 1.0 BTC belongs to one giant server or 10,000 small "Ghost" nodes.
 
----
+### 4.6 Decoupled Incentives: The Blind Settlement Buffer
+
+To break the statistical correlation between **Packet Emission (The Work)** and **Reward Redemption (The Profit)**:
+
+#### A. Delayed & Batch Settlement (DBS)
+Traditional blockchain rewards happen in near real-time, allowing monitors to link an IP's activity with a wallet's growth. GCEP enforces a **Blind Buffer**.
+* **The Logic:** Rewards ($Diamonds$) earned from transmigrating shards are not released immediately. They are held in a decentralized, time-locked escrow.
+* **The Mechanism:** Payouts occur in **Randomized Batches** only after a significant temporal lag and a minimum volume threshold (e.g., 1.0 BTC). 
+* **The Strategic Value:** This destroys the **Statistical Linkage** between communication bursts and financial gain. Even if a monitor records every packet and every blockchain transaction, there is zero temporal correlation to prove they belong to the same entity. The money "appears" long after the ghost has moved.
 
 ## 5. Deployment Guide
 
