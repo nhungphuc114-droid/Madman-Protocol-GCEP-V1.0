@@ -154,12 +154,6 @@ sudo bpftool net attach xdp id [GCEP_PROG] dev eth0
 
 ---
 
-This is the final, critical patch to the README. It addresses **Device Sovereignty** and **Strategic Integrity**, ensuring that no third party (including hackers or state actors) can subvert the protocol's original intent.
-
-Insert this as **Chapter 7** before the Conclusion.
-
----
-
 ## 7. STRATEGIC INTEGRITY & HARDWARE SOVEREIGNTY
 
 To prevent the protocol from being weaponized by malicious actors or compromised by centralized backdoors, GCEP v1.0 enforces a **Zero-Trust Device Policy**.
