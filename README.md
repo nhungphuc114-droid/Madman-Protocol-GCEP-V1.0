@@ -49,7 +49,41 @@ GCEP solves the "honest node" problem via hardware-level enforcement.
 * **NIC:** SmartNICs or standard NICs supporting native XDP (e.g., `i40e`, `mlx5_core`).
 * **Entropy Source:** Access to `/dev/urandom` or hardware RNG.
 
----
+3.1 Kernel-Level Enforcement (eBPF/XDP)
+The core of GCEP is implemented as an eBPF program attached to the XDP hook. This ensures that every packet is processed at the earliest possible point in the software stack.
+
+Here is the logic for the "Transmission-as-Key" interlock:
+// GCEP Kernel-space Logic (eBPF/XDP)
+// This code runs inside the Network Interface Card (NIC) driver
+
+int handle_gcep_packet(struct xdp_md *ctx) {
+    void *data = (void *)(long)ctx->data;
+    void *data_end = (void *)(long)ctx->data_end;
+
+    // 1. 識別 GCEP 碎塊
+    if (!is_gcep_fragment(data)) return XDP_PASS;
+
+    // 2. 物理互鎖核心：獲取當前網絡發射偏移量 (Entropy)
+    uint64_t tx_timestamp = bpf_ktime_get_ns();
+    uint32_t cpu_id = bpf_get_smp_processor_id();
+
+    // 3. 轉世 (Regeneration)：修改數據包特徵，斬斷因果鏈
+    mutate_packet_header(data); 
+    inject_noise_padding(data);
+
+    // 4. 合成領獎密鑰 (Synthesis)
+    // 只有當包被推向發射緩衝區時，密鑰才坍縮成完整狀態
+    uint256_t reward_token = hmac_sha256(packet_payload, tx_timestamp ^ cpu_id);
+
+    // 5. 執行發射 (Physical Action)
+    // 這一點不執行，reward_token 就不會被存儲到 map 中
+    if (xdp_transmit(ctx) == XDP_TX) {
+        bpf_map_update_elem(&reward_ledger, &tx_timestamp, &reward_token, BPF_ANY);
+        return XDP_TX;
+    }
+
+    return XDP_DROP;
+}
 
 ## 4. Installation & Deployment
 
