@@ -1,5 +1,5 @@
-#  BlackForest: Ghost Communication & Exchange Protocol (GCEP)
-## RFC-M: 0xDEADBEEF-01 | Version 1.0 (Transmigration)
+BlackForest: Ghost Communication & Exchange Protocol (GCEP)
+## RFC-M: 0xDEADBEEF-01 | Version 1.0 
 ### *A Decentralized Framework for Statistical Invisibility and Economic Attrition*
 
 ---
