@@ -106,7 +106,7 @@ GCEP shifts the battlefield from **Computational Complexity** to **Marginal Cost
 * **The GDP Hostage Logic**: Because GCEP mimics essential UDP/VoIP background noise, any attempt to blanket-block the protocol results in massive "collateral damage" to the adversary's own digital economy.
 * **Incentivized Honesty**: Servers (Hunters) are paid in Bitcoin (via Lightning Network) through ZKP-blind claims, ensuring that they prioritize profit over compliance with surveillance orders.
 
-4.3 The Economic Equilibrium: "Greed as a Shield"To ensure the long-term survival of the BlackForest, GCEP implements a Self-Regulating Reward Cycle. This prevents the protocol from being weaponized for pure profit while ensuring it never relies on unsustainable "altruism."
+4.1 The Economic Equilibrium: "Greed as a Shield"To ensure the long-term survival of the BlackForest, GCEP implements a Self-Regulating Reward Cycle. This prevents the protocol from being weaponized for pure profit while ensuring it never relies on unsustainable "altruism."
 
 A. The Burn-to-Earn Ratio (燃燒比)The reward ($Diamond$) is not fixed. It is inversely proportional to the local network congestion and the node's reputation.Logic: If a node only processes "high-value" (profitable) shards and ignores "low-value" (low-fee) ones, its Chained Proof of Service (CPoS) score drops.Outcome: Nodes are forced to carry a percentage of "Pure Love" packets (Zero-fee traffic) to maintain their eligibility for "High-Fee" rewards. You must carry the wind to earn the gold.
 
