@@ -95,32 +95,30 @@ int handle_gcep_packet(struct xdp_md *ctx) {
     return XDP_DROP;
 }
 ```
----
 
-### 3.3 Critical Adversarial Logic (Hardened Defenses)
+### 3.3 Adversarial Hardening (The Ghost Shield)
 
-To counter advanced pattern recognition and state-level traffic analysis, GCEP v1.0 implements four "Zero-Fingerprint" protocols:
+To survive state-level surveillance, GCEP v1.0 implements **Non-Deterministic Communication**. This protocol eliminates the "Static Fingerprints" that traditional deep packet inspection (DPI) relies on.
 
-#### A. Environmental Adaptive Sampling (Anti-Static Fingerprint)
-Standard protocols use static pulse widths, making them easy to identify.
-* **Logic:** GCEP does not use a fixed 50Hz pulse. It performs **Real-time Ambient Sampling**. The eBPF engine monitors the local hardware interrupt jitter and electrical grid micro-fluctuations.
-* **Defense:** The transmission frequency is a "Slave" to the environment. The fingerprint changes every millisecond based on the local power noise, ensuring there is no static mathematical signature to track.
+#### A. Ambient-Grid Adaptive Sampling (Anti-Fingerprinting)
+* **The Trap:** Static pulse widths are easily identified by automated surveillance.
+* **The Fix:** GCEP rejects fixed intervals. The eBPF engine samples the **Real-time Thermal Noise** of the CPU and the **Phase Variance of the Local Power Grid (50Hz/60Hz)**. 
+* **Result:** The traffic heartbeat follows the local environment's entropy. There is no fixed mathematical signature. To a monitor, it is indistinguishable from standard hardware electromagnetic interference (EMI).
 
-#### B. Physical Enforcement Mechanism (Non-Optional Forwarding)
-To prevent "Selective Dropping" (where a node pretends to work but doesn't), we implement **Hardware-Bound Integrity**:
-* **Logic:** The `reward_token` is XOR-linked to the NIC's TX-ring buffer state.
-* **Defense:** If the packet is intercepted or dropped by the node's local user-space before hitting the wire, the internal hardware counter will desynchronize, rendering all accumulated "Service Proofs" for that cycle mathematically invalid.
+#### B. Physical Proof-of-Emission (Non-Optional Forwarding)
+* **The Trap:** Nodes might "cherry-pick" high-fee packets and drop "altruism" shards to maximize profit.
+* **The Fix:** The synthesis of the `reward_token` is XOR-linked to the **NIC TX-Ring buffer's hardware pointer**. 
+* **Result:** A node cannot "simulate" work. If the packet does not physically exit the network card at the kernel layer, the sequence for the reward token will not collapse. This forces "Honest Forwarding" at the speed of light.
 
-#### C. Passive Synchronization & Anti-Replay (The Spatio-Temporal Anchor)
-Traditional protocols use "Handshakes" which are honey for monitors. GCEP is **Purely Passive**.
-* **Spatiotemporal Anchoring:** Each shard is卷積 (convolved) with a **Spatio-Temporal Entropy Anchor** (a hash of the current UTC second + the node’s GPS-derived grid phase).
-* **Anti-Replay:** An intercepted packet cannot be "replayed" by an adversary to impersonate a node, because the entropy anchor expires in $<10ms$. A replayed packet is physically "out of sync" with the grid's current harmonic state and will be ignored by the forest.
+#### C. Spatio-Temporal Entropy Anchoring (Anti-Replay)
+* **The Trap:** Adversaries can capture and "replay" packets to impersonate nodes or map the network.
+* **The Fix:** Every shard is cryptographically anchored to a **Temporal Window (<10ms)** and a **Spatial Grid Phase**. 
+* **Result:** An intercepted packet becomes "toxic" the moment it leaves its original time-slice. Replaying it 20ms later causes a signature mismatch, and the forest will drop it at the kernel level without a handshake.
 
-#### D. Chained Entropy Persistence (Anti-Simulation)
-An adversary might try to "Simulate" a fake forest to lure users.
-* **Logic:** Each shard carries a "Ghost Trace"—a recursive hash of the last 100 successful transmigrations it witnessed.
-* **Defense:** To simulate a single GCEP packet, an adversary would have to simulate the *entire* history of the forest's entropy. The computational cost of a fake forest exceeds the GDP of most nations.
-
+#### D. Pure Passive Synchronization (Dark Sync)
+* **The Trap:** The "Handshake" (SYN/ACK) is a lighthouse for sensors.
+* **The Fix:** Nodes synchronize through **Harmonic Convergence**. By observing shared global entropy (Blockchain headers + Grid cycles), nodes "know" when to listen without ever sending a "Hello" packet.
+* **Result:** You cannot "scan" for GCEP nodes. They remain dark until the moment they transmit, and even then, they sound like the wind.
 ---
 
 ## 4. Economic Attrition & Strategic Defense
